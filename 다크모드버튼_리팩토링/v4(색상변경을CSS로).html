@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>v4</title>
+    <style>
+      body {
+        background-color: white;
+        color: black;
+      }
+
+      body.dark {
+        background-color: black;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <input id="night_day" type="button" value="night" />
+    <p>버튼을 눌러 테마를 바꿔 보세요.</p>
+
+    <script>
+      const button = document.querySelector("#night_day");
+
+      button.addEventListener("click", () => {
+        const isDark = document.body.classList.toggle("dark");
+        button.value = isDark ? "day" : "night";
+      });
+    </script>
+  </body>
+</html>
