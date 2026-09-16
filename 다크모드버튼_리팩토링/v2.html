@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>v2</title>
+  </head>
+  <body>
+    <div id="container">
+      <input
+        id="night_day"
+        type="button"
+        value="night"
+        onclick="
+          const target = document.querySelector('body');
+          if (this.value === 'night') {
+            target.style.backgroundColor = 'black';
+            target.style.color = 'white';
+            this.value = 'day';
+          } else {
+            target.style.backgroundColor = 'white';
+            target.style.color = 'black';
+            this.value = 'night';
+          }
+        "
+      />
+      <!-- 변수 선언을 통해서 document.querySelector('body') → const target으로 쉽고 짧게 사용할 수 있도록 했다. -->
+      <!-- 현재 input태그를 가리키는 this를 사용해서 document.querySelector('#night_day') → this로 쉽고 짧게 사용할 수 있도록 했다. -->
+    </div>
+  </body>
+</html>
