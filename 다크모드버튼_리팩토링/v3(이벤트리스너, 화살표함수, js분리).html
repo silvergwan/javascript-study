@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>v3</title>
+  </head>
+  <body>
+    <input id="night_day" type="button" value="night" />
+    <script>
+      const button = document.querySelector("#night_day");
+      const target = document.querySelector("body");
+
+      button.addEventListener("click", () => {
+        if (button.value === "night") {
+          target.style.backgroundColor = "black";
+          target.style.color = "white";
+          button.value = "day";
+        } else {
+          target.style.backgroundColor = "white";
+          target.style.color = "black";
+          button.value = "night";
+        }
+      });
+    </script>
+  </body>
+</html>
