@@ -1,4 +1,4 @@
-const obj = {
-  name: "상현",
-  age: "24",
+const myGirlFriend = {
+  name: "김민주",
+  age: "25",
 };
